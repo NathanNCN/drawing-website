@@ -16,13 +16,17 @@
                 <div id ='gridDom' class='grid'>
                 </div>
                 <div class='dialContainer'>
-                    <div class='dial'><button>Tools</button></div>
-                    <div class='options'>
-                        <button id='GridSize16'>16x16</button>
-                        <button id='GridSize36'>36x36</button>
-                        <button id='GridSize72'>72x72</button>
+                    <div class='dial'><button id='tools'>Tools</button></div>
+                    <div id ='ContainerTools' class='options'>
+                        <button class='buttons' id='Eraser'>Eraser</button>
+                        <button class='buttons' id='Black'>Black</button>
+                        <button class='buttons'id='Color'>Color</button>
                     </div>
-                    <div class='dial'><button>Grid</button></div>
+                    <div id='ContainerGrid' class='options'>
+                        <input type="range" min='1' max='64' value='16' class='option-slider' id='slider'>
+                        <p id='textBox' style = "text-align: center;"  class='buttons'></p>
+                    </div>
+                    <div class='dial' ><button id='grid'>Grid</button></div>
                 </div>
             </div>
         </div>
