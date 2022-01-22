@@ -1,6 +1,6 @@
 
 
-.title{
+..title{
     color: yellow;
     font-size: 1.5em;
     text-align: center;
@@ -70,6 +70,11 @@
     width: 50px;
     
 }
+.dial button:hover {
+    color: yellow;
+}
+
+
 
 .options{
     display: flex;
@@ -82,15 +87,25 @@
     border-radius: 5px;
 }
 
-.options button{
+.buttons{
     margin: 10px;
     border: yellow solid 3.5px;
     background-color: red;
     color: yellow;
     font-weight: bold;
     width: 33%;
-
+    font-size: 20px;
 }
+
+
+
+#slider {
+    width: 100%;
+    background-color: yellow;
+}
+
+
+
 
 .credits {
     font-weight: bold;
@@ -105,16 +120,15 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: repeat(6,33%);
 }
+
 
 
 .grid-cell{
-    border: black solid 0.1px;
-    width: auto;
-    height: auto;
+    border: black solid 1px;
 }
 
-.grid-cell :hover {
-    background-color: black;
-}
+
+
+
