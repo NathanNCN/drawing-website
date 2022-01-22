@@ -1,33 +1,46 @@
-let tablet = document.getElementById("gridDom");
+llet tablet = document.getElementById("gridDom");
 
-let bttnSize16 = document.getElementById('GridSize16')
+let bttnSize16 = document.getElementById('GridSize16');
 
-let bttnSize36 = document.getElementById('GridSize36')
+let bttnSize36 = document.getElementById('GridSize36');
 
-let bttnSize72= document.getElementById('GridSize72')
+let bttnSize72 = document.getElementById('GridSize72');
+
+let bttnTools = document.getElementById('tools');
+
+let bttnGrid = document.getElementById('grid');
+
+let containerTools = document.getElementById('ContainerTools');
+let containerGrid = document.getElementById('ContainerGrid');
+
 
 
 function restGrid(){
-    //problem is that before when i click the buttons it would work
-    //it created the divs and stuff. But when you click on another one instead 
-    //of it being 16x16 to 36x36 it would stack on top of each other so
-    //Now I am struggling with how to remove the divs cause now I cant even get the grids
-    let div = document.getElementById('cell')
-    div.parentNode.removeChild(div);
+    while (tablet.firstChild) {
+        tablet.removeChild(tablet.lastChild);
+    }
 }
+
+
 
 function gridSize(size){
     restGrid();
+    let width=100/Math.sqrt(size);
     for (let i=0; i<size; i++){
         let div = document.createElement('div');
         div.classList.add('grid-cell');
-        div.setAttribute('id', 'cell');
         tablet.appendChild(div);
     }
-    let width=100/Math.sqrt(size);
     tablet.style.gridTemplateColumns = 'repeat('+ Math.sqrt(size) + ', ' + width +'%)'
 }
 
+//function showOptions(){
+    containerGrid.style.display = 'none';
+    containerTools.style.display = 'flex';
+    console.log('bruh')
+}
+
+//bttnTools.addEventListener('click', () => showOptions());
 
 bttnSize16.addEventListener('click', () => gridSize(256));
 bttnSize36.addEventListener('click', () => gridSize(1296));
