@@ -1,9 +1,11 @@
 
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
 
-..title{
+.title{
     color: yellow;
     font-size: 1.5em;
     text-align: center;
+    font-family: 'Boogaloo';
 }
 
 .screenFlex{
@@ -68,6 +70,7 @@
     all: unset;
     height: 50px;
     width: 50px;
+    font-family: 'Boogaloo';
     
 }
 .dial button:hover {
@@ -87,7 +90,10 @@
     border-radius: 5px;
 }
 
+
+
 .buttons{
+    font-family: 'Boogaloo';
     margin: 10px;
     border: yellow solid 3.5px;
     background-color: red;
@@ -97,7 +103,14 @@
     font-size: 20px;
 }
 
+.buttons:hover{
+    background-color:yellow;
+    border: red solid 3.5px;
+    color: red;
 
+
+
+}
 
 #slider {
     width: 100%;
@@ -123,11 +136,16 @@
     grid-template-columns: repeat(6,33%);
 }
 
-
-
-.grid-cell{
-    border: black solid 1px;
+.grid-trail {
+    background-color: black;
 }
+
+.grid-eraser {
+    background-color: white;
+}
+
+
+
 
 
 
