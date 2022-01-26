@@ -7,8 +7,9 @@ let bttnBlack = document.getElementById('black')
 let containerTools = document.getElementById('ContainerTools');
 let containerGrid = document.getElementById('ContainerGrid');
 let sliderGrid = document.getElementById('slider');
+
 let text = document.getElementById('textBox');
-let currentTrail = 'black';
+let currentTrail = 'grid-trail';
 
 
 
@@ -41,7 +42,11 @@ function showGrid(){ //shows slider which controls grid size
 }
 
 function trail(event){
-    event.target.classList.add('grid-trail')
+    event.target.classList.add(currentTrail);
+}
+
+function changeColor(color){
+    currentTrail = color;
 }
 
 
@@ -54,9 +59,8 @@ gridSize(16*16);// make the defualt grid 16x16
 bttnTools.addEventListener('click', () => showTools());
 bttnGrid.addEventListener('click', () => showGrid());
 
-bttnEraser.addEventListener('click',{
-    
-})
+bttnEraser.addEventListener('click', () => changeColor('grid-eraser'));
+bttnBlack.addEventListener('click', () => changeColor('grid-trail'));
 
 
 sliderGrid.addEventListener('mouseup', () => gridSize(sliderGrid.value*sliderGrid.value));
