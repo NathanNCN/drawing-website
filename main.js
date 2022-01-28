@@ -63,7 +63,7 @@ bttnGrid.addEventListener('click', () => showGrid());
 
 bttnEraser.addEventListener('click', () => changeColor('grid-eraser'));
 bttnBlack.addEventListener('click', () => changeColor('grid-trail'));
-bttnRest.addEventListener('click', () => gridSize(currentGridSize*currentGridSize*);
+bttnRest.addEventListener('click', () => gridSize(currentGridSize*currentGridSize));
 
 
 
