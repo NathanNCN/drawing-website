@@ -2,7 +2,7 @@ let tablet = document.getElementById("gridDom"); // getting elements from page
 let bttnTools = document.getElementById('tools');
 let bttnGrid = document.getElementById('grid');
 let bttnEraser = document.getElementById('eraser');
-let bttnColor = document.getElementById('color')
+let bttnRest = document.getElementById('rest')
 let bttnBlack = document.getElementById('black')
 let containerTools = document.getElementById('ContainerTools');
 let containerGrid = document.getElementById('ContainerGrid');
@@ -10,6 +10,7 @@ let sliderGrid = document.getElementById('slider');
 
 let text = document.getElementById('textBox');
 let currentTrail = 'grid-trail';
+let currentGridSize = none;
 
 
 
@@ -22,6 +23,7 @@ function restGrid(){ // rests the grid
 
 function gridSize(size){ //updates the tablet to the users grid size
     restGrid();
+    currGridSize = size;
     text.textContent = sliderGrid.value + ' x ' + sliderGrid.value;
     tablet.style.gridTemplateColumns = 'repeat('+ Math.sqrt(size) + ', 1fr)'
     for (let i=0; i<size; i++){
@@ -61,6 +63,8 @@ bttnGrid.addEventListener('click', () => showGrid());
 
 bttnEraser.addEventListener('click', () => changeColor('grid-eraser'));
 bttnBlack.addEventListener('click', () => changeColor('grid-trail'));
+bttnRest.addEventListener('click', () => gridSize(currentGridSize*currentGridSize*);
+
 
 
 sliderGrid.addEventListener('mouseup', () => gridSize(sliderGrid.value*sliderGrid.value));
