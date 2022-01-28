@@ -23,7 +23,7 @@ function restGrid(){ // rests the grid
 
 function gridSize(size){ //updates the tablet to the users grid size
     restGrid();
-    currGridSize = size;
+    currentGridSize = size;
     text.textContent = sliderGrid.value + ' x ' + sliderGrid.value;
     tablet.style.gridTemplateColumns = 'repeat('+ Math.sqrt(size) + ', 1fr)'
     for (let i=0; i<size; i++){
