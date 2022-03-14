@@ -10,7 +10,6 @@ let sliderGrid = document.getElementById('slider');
 
 let text = document.getElementById('textBox');
 let currentTrail = 'grid-trail';
-//let currentGridSize = none;
 
 
 
@@ -23,7 +22,7 @@ function restGrid(){ // rests the grid
 
 function gridSize(size){ //updates the tablet to the users grid size
     restGrid();
-    //currentGridSize = size;
+    currentGridSize = size;
     text.textContent = sliderGrid.value + ' x ' + sliderGrid.value;
     tablet.style.gridTemplateColumns = 'repeat('+ Math.sqrt(size) + ', 1fr)'
     for (let i=0; i<size; i++){
@@ -63,7 +62,7 @@ bttnGrid.addEventListener('click', () => showGrid());
 
 bttnEraser.addEventListener('click', () => changeColor('grid-eraser'));
 bttnBlack.addEventListener('click', () => changeColor('grid-trail'));
-//bttnRest.addEventListener('click', () => gridSize(currentGridSize*currentGridSize));
+bttnRest.addEventListener('click', () => gridSize(sliderGrid.value*sliderGrid.value));
 
 
 
